@@ -1,0 +1,4 @@
+name = Custom Post Form
+description = Custom Post Form
+core = 7.x
+package = Custom

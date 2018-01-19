@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file for changing form of post type.
+ */
+
+/**
+ * Implements hook_form_alter().
+ */
+function custom_post_form_form_alter(&$form, &$form_state, $form_id){
+    dsm($form_id);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function custom_post_form_form_post_node_form_alter(&$form, &$form_state, $form_id){
+
+    $form['title']['#required'] = FALSE;
+    $form['title']['#access'] =  FALSE;
+    dsm($form);
+}

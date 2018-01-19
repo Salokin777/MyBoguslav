@@ -1,0 +1,332 @@
+/*
+ * @file
+ * Print Styles
+ * This probably needs work, but it's a good starting point.
+ */
+/*
+ * Body
+ */
+/* line 14, ../sсss/print.sсss */
+body {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.4;
+  word-spacing: 1.1pt;
+  letter-spacing: 0.2pt;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  color: black;
+  background: none;
+  font-size: 11pt;
+}
+
+/*
+ * Links
+ */
+/* line 31, ../sсss/print.sсss */
+a {
+  background: transparent;
+  font-weight: 700;
+  text-decoration: underline;
+  color: #0000ee;
+}
+/* line 38, ../sсss/print.sсss */
+a[href^="http://"]:after, a[href^="http://"]:visited:after {
+  content: "(" attr(href) ")";
+  font-size: 10pt;
+}
+
+/*
+ * Strip background from likely candidates
+ */
+/* line 49, ../sсss/print.sсss */
+div[id*="wrapper"],
+[class*="title"],
+[class*="inner"],
+header,
+footer,
+#branding,
+#container,
+#columns,
+.columns-inner,
+#content-column,
+.content-inner,
+.region,
+.region-header,
+.region-content,
+.article,
+.article-title,
+.article-content,
+.comment,
+.comment-title,
+.comment-content,
+.block,
+.block-inner,
+.block-title,
+.block-content,
+table,
+table * {
+  background: none !important;
+}
+
+/*
+ * Hide various bits of the page
+ */
+/* line 82, ../sсss/print.sсss */
+.sidebar,
+#breadcrumb,
+.nav,
+.field-type-taxonomy-term-reference,
+ul.links,
+.feed-icon,
+.poll .bar,
+.poll .foreground,
+.comment-form,
+#comment-form,
+.book-navigation,
+.tabs,
+.action-links,
+.pager,
+.messages,
+.help {
+  display: none;
+}
+
+/*
+ * Ensure the display the main content region
+ */
+/* line 105, ../sсss/print.scss */
+#content {
+  display: block !important;
+}
+
+/*
+ * Layout
+ */
+/* line 113, ../sсss/print.sсss */
+#header {
+  margin-bottom: 20px;
+}
+
+/* line 118, ../sсss/print.sсss */
+.content-inner {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/*
+ * HTML elements
+ */
+/* line 127, ../sсss/print.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333333;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+/* line 140, ../sсss/print.scss */
+h1 {
+  font-size: 14pt;
+}
+
+/* line 145, ../sсss/print.scss */
+h2 {
+  font-size: 13pt;
+}
+
+/* line 150, ../sсss/print.sсss */
+h3 {
+  font-size: 12pt;
+}
+
+/* line 155, ../sсss/print.scss */
+h4,
+h5,
+h6 {
+  font-size: 11pt;
+}
+
+/* line 161, ../sсss/print.sсss */
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a,
+#site-name a,
+#site-slogan {
+  text-decoration: none !important;
+  color: #333333;
+}
+
+/* line 175, ../sсss/print.scss */
+.h-group a:link, .h-group a:visited {
+  text-decoration: none;
+}
+
+/* line 182, ../sсss/print.sсss */
+#page-title {
+  margin-top: 20px;
+}
+
+/* line 187, ../sсss/print.sсss */
+pre,
+code,
+tt,
+samp,
+kbd,
+var {
+  font-size: 10pt;
+  font-family: Consolas, "Lucida Console", Menlo, Monaco, "DejaVu Sans Mono", monospace, sans-serif;
+}
+
+/* line 198, ../sсss/print.sсss */
+blockquote {
+  margin: 20px;
+  padding: 10px;
+  font-size: 10pt;
+  font-style: italic;
+  background: #eeeeee;
+}
+
+/* line 207, ../sсss/print.scss */
+hr {
+  background-color: #666666;
+}
+
+/*
+ * Header, Logo, Site name
+ */
+/* line 215, ../sсss/print.sсss */
+#header {
+  padding-bottom: 20px;
+}
+
+/* line 220, ../sсss/print.sсss */
+#logo img {
+  padding: 0 10px 0 0;
+  margin: 0 !important;
+  float: none !important;
+}
+
+/*
+ * Images
+ */
+/* line 230, ../sсss/print.scss */
+img {
+  float: left;
+  margin: 4px 20px 10px 0;
+  page-break-inside: avoid;
+}
+
+/* line 237, ../sсss/print.scss */
+a img {
+  border: none;
+}
+
+/*
+ * Tables
+ */
+/* line 245, ../sсss/print.scss */
+table {
+  margin: 1px;
+  text-align: left;
+}
+
+/* line 251, ../sсss/print.sсss */
+th {
+  border-bottom: 1px solid #333333;
+  font-weight: 700;
+}
+
+/* line 257, ../sсss/print.scss */
+td {
+  border-bottom: 1px solid #333333;
+}
+
+/* line 262, ../sсss/print.scss */
+th,
+td {
+  padding: 4px 10px 4px 0;
+}
+
+/* line 268, ../sсss/print.scss */
+tfoot {
+  font-style: italic;
+}
+
+/* line 273, ../sсss/print.sсss */
+caption {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* line 279, ../sсss/print.sсss */
+thead {
+  display: table-header-group;
+}
+
+/* line 284, ../sсss/print.sсss */
+tr {
+  page-break-inside: avoid;
+}
+
+/*
+ * Forms
+ */
+/* line 292, ../sсss/print.sсss */
+form {
+  margin-bottom: 10px;
+}
+
+/*
+ * Poll module
+ */
+/* line 300, ../sсss/print.sсss */
+.poll .text,
+.poll .percent,
+.poll .total {
+  text-align: left;
+}
+/* line 305, ../sсss/print.sсss */
+.poll form {
+  margin-bottom: 0;
+}
+
+/*
+ * Articles
+ */
+/* line 314, ../sсss/print.sсss */
+.node,
+.comment {
+  margin-bottom: 20px;
+  overflow: hidden;
+  page-break-inside: avoid;
+}
+
+/* line 321, ../sсss/print.sсss */
+.submitted {
+  color: #666666;
+  text-decoration: none;
+  font-size: 9pt;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+/* line 329, ../sсss/print.scss */
+.submitted a {
+  color: #666666;
+  text-decoration: none;
+  font-size: 9pt;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=print.css.map */

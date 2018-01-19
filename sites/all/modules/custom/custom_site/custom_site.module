@@ -1,0 +1,47 @@
+<?php
+
+
+/*
+ * @file for testing hooks
+ */
+
+function custom_site_views_pre_view(&$view, &$display_id, &$args) {
+    // Change the display if the acting user has 'administer site configuration'
+    // permission, to display something radically different.
+    // (Note that this is not necessarily the best way to solve that task. Feel
+    // free to contribute another example!)
+    if ($view->name == 'post_front_page'){
+       // kpr($view);
+    }
+}
+
+
+/**
+ * Implements template_preprocess_views_view().
+ */
+function custom_site_preprocess_views_view(&$vars) {
+    if ($vars['view']->name == 'post_front_page' && $vars['view']->current_display == 'panel_pane_1') {
+        //kpr($vars);
+    }
+}
+
+
+/**
+ * Implements hook_form_alter().
+ */
+function custom_site_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
+    if($form['#id'] == 'views-exposed-form-post-front-page-panel-pane-1') {
+
+        //$form['date_filter']['min']['#title'] = '';
+        //$form['date_filter']['max']['#title'] = '';
+        //$form['date_filter']['min']['#attributes']['placeholder'] = 'Від';
+        //form['date_filter']['max']['#attributes']['placeholder'] = 'До';
+        //$form['date_filter']['min']['#date_format'] = 'd.m.y';
+        //$form['date_filter']['max']['#date_format'] = 'd.m.y';
+        $form['date_filter']['value']['#date_format'] = 'd M y';
+        $form['date_filter_1']['value']['#date_format'] = 'd M y';
+
+        kpr($form);
+    }
+}
+

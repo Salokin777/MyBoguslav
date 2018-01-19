@@ -1,0 +1,4 @@
+name = Custom DS Field
+description = Custom DS Field
+core = 7.x
+package = Custom
